@@ -1,0 +1,31 @@
+<html>
+	<head>
+    <link href="css/master.css" rel="stylesheet" type="text/css"/>
+    </head>
+	<body>
+		<div id="nav_bar">
+			<a href="#"> <div id="linkmap"></div></a>
+			<a href="#"> <div id="linktimetable"></div></a>
+			<a href="#"> <div id="linkbooking"></div></a>
+		</div>
+		<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#linkmap").addClass("linkmapnorm");
+				$("#linkmap").mousedown(function(e) {
+					e.preventDefault();
+					$("#linkmap").addClass("linkmapglow");
+				}).mouseup(function(e) {
+					$("#linkmap").removeClass("linkmapglow");
+				});
+				
+				$("body").mouseup(function(e) {
+					if ($("#linkmap").hasClass("linkmapglow")) {
+						alert("aaa");
+						$("#linkmap").removeClass("linkmapglow");
+					};
+				});
+			});
+		</script>
+	</body>
+</html>
