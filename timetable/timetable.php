@@ -59,8 +59,8 @@
 <div style="display:inline-block; float:left; width:800px;">
     	<div  style="display:inline-block; float:left;">
 		Select Building:
-		<form action="search.php" method="POST">
-		<select>
+		<form action="searchbuilding.php" method="POST">
+		<select name="building">
 		<option value="#" selected="selected">Select Building</option>
 		<?php 
 		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
@@ -72,7 +72,7 @@
 			mysql_free_result($result);
 		?>
 		</select>
-		<input type="submit" value="Search" ></input>
+		<input type="submit" value="Search"></input>
      	</form>
         </div>
     &nbsp;
@@ -86,19 +86,20 @@
 
     	<div style="display:inline-block; float:left;">
 		Select Class:
-    	<form action="../">
-		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
+    	<form action="searchclass.php" method="POST">
+		<select name="class">
 		<option value="#" selected="selected">Select Class</option>
 		<?php 
 		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
 			{
 		?>
-	  	<option value="#"><?php echo $row["module"] ?></option>
+	  	<option value="<?php echo $row["module"] ?>"><?php echo $row["module"] ?></option>
 	  	<?php 
 			}
 			mysql_free_result($result);
 		?>
 	  	</select>
+		<input type="submit" value="Search"></input>
      	</form>
         </div>
     &nbsp;
@@ -111,19 +112,20 @@
 ?>
     	<div style="display:inline-block; float:left;">
 		Select Time:
-    	<form action="../">
-		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
-		<option value="#" selected="selected">Select Time</option>
-	  	<?php 
-		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
-			{
-		?>
-	  	<option value="#"><?php echo $row["time"] ?></option>
-	  	<?php 
-			}
-			mysql_free_result($result);
-		?>
-	  	</select>
+    	<form action="searchtime.php" method="POST">
+			<select name="time1">
+			<option value="#" selected="selected">Select Time</option>
+			<?php 
+			while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+				{
+			?>
+			<option value="<?php echo $row["time"] ?>"><?php echo $row["time"] ?></option>
+			<?php 
+				}
+					mysql_free_result($result);
+			?>
+			</select>
+			<input type="submit" value="Search"></input>
      	</form>
         </div>
     &nbsp;

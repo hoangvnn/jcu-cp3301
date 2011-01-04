@@ -7,17 +7,14 @@
 <?php
 	if($_REQUEST)
 	{
-		$building = $_REQUEST['building'];
-		$class = $_REQUEST['class'];
-		$time = $_REQUEST['time'];
+			$timing = $_REQUEST['time1'];
 	}
 	$pass="pass123";
 	$user="root";
 	$loc="localhost";
 	$db="iversity";
-	print_r($building);
-	print_r($class);
-	print_r($time);
+	print_r($timing);
+	
 ?>
 
 <div align="left"> <img src="../images/Previous.png" width="85" height="85" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="85" height="85" /></a></div>
@@ -36,7 +33,7 @@
 			mysql_select_db($db);
 
 			
-			$result = mysql_query("SELECT * FROM timetable WHERE room ='".$building."'");
+			$result = mysql_query("SELECT * FROM timetable WHERE time='".$timing."'");
 			$gettime = $_GET['time'];
 			$getmodule = $_GET['module'];
 			$getroom = $_GET['room'];
