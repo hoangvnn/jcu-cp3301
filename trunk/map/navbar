@@ -1,0 +1,5 @@
+<div id = "nav_bar" >
+	<a href="javascript:history.go(-1)"> <img src="../images/Previous.png"/></a>
+	<a href="javascript:history.go(+1)"> <img src="../images/Next.png"/></a>
+	<a href="map.html"> <img src="../images/Map.png"/></a>
+</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/xhtml1-loose.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/master.css" />
+	<link rel="stylesheet" type="text/css" href="../css/map.css" />	
+	<link rel="stylesheet" type="text/css" href="keyboard/keyboard.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div id="main_content">
+	<!-- navigation bar -->
+	<div id = "nav_bar" >
+		<a href="javascript:history.go(-1)"> <img src="../images/Previous.png"/></a>
+		<a href="javascript:history.go(+1)"> <img src="../images/Next.png"/></a>
+		<a href="map.html"> <img src="../images/Map.png"/></a>
+		<img src="../images/iVersity_logo_1.png" style="width:400px; float:right;"></img>
+	</div>
+	<!-- end of navigation bar -->
+	<!-- left bar - the map -->
+	<div id="left">
+		<input type="text" value="" class="keyboardInput" size="62">
+		<a href="mapplaces1.html"><input type="button" id="btnPlacesSearch" value="Search for places" ></input></a>
+		<div id="divResult">
+			<span>PLACES</span>
+		</div>
+	</div>
+	<!-- end of left bar-->
+	<!-- right bar -->
+	<div id="right">
+		<ul id="info">
+			<li><img src="images/pointerleft.png"></img>Use the virtual keyboard to type, then press "Search for places" to search</li>
+			<div style="border-bottom:1px solid #000000; padding:0; margin:0;"></div>
+			<li><img src="images/pointerleft.png"></img>This area will display the search results. You can choose from the list of results to see the location on the map</li>
+		</ul>
+	</div>
+	<!-- end of right bar -->	
+	<!-- virtual keyboard-->
+	<div id="map_menu">
+	</div>
+	<!-- end of map menu-->	
+</div>
+<!-- end of main content -->	
+<script type="text/javascript" src="keyboard/keyboard.js" charset="UTF-8"></script>		
+</body>
+</html>

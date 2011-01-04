@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/xhtml1-loose.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/master.css" />
+	<link rel="stylesheet" type="text/css" href="../css/map.css" />	
+	<style type="text/css">
+		ul{
+			list-style-type:none;
+			margin-top:0;
+			margin-left:0;
+			padding-left:0px;
+			overflow:hidden;
+		}
+		ul li{
+			margin:5px 0 10px 0px;
+			padding-left:15px;
+		}
+		ul li a{
+			font-size:120%;
+			text-decoration:none;
+			display:inline-block;
+			padding: 5px 0 5px 0; 
+		}
+		ul li a:active{
+			background-color:#333333;
+			color:#FFFFFF;
+			padding-right:32767px;
+			margin-right:-32767px;
+		}
+	</style>
+</head>
+<body>
+<div id="main_content">
+	<!-- navigation bar -->
+	<div id = "nav_bar" >
+		<a href="javascript:history.go(-1)"> <img src="../images/Previous.png"/></a>
+		<a href="javascript:history.go(+1)"> <img src="../images/Next.png"/></a>
+		<a href="map.html"> <img src="../images/Map.png"/></a>
+		<img src="../images/iVersity_logo_1.png" style="width:400px; float:right;"></img>
+	</div>
+	<!-- end of navigation bar -->
+	<!-- left bar - the map -->
+	<div id="left">
+		<input type="text" value="library" size="62" disabled></input>
+		<a href="mapplaces1.html"><input type="button" id="btnPlacesSearch" value="Search for places" ></input></a>
+		<div id="divResult">
+			<span>PLACES</span>
+			<ul>
+				<li>	<a href="mapplaces2.html">Main University Library</a></li>
+				<li>	<a href="mapplaces3.html">References Library</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end of left bar-->
+	<!-- right bar -->
+	<div id="right">
+		<ul id="info">
+			<li><img src="images/pointerleft.png"></img>In this screen you have specified the place to search for</li>
+			<div style="border-bottom:1px solid #000000; padding:0; margin:0;"></div>
+			<li><img src="images/pointerleft.png"></img>This area will display the search results. You can choose from the list of results to see the location on the map</li>
+		</ul>
+	</div>
+	<!-- end of right bar -->	
+	<!-- virtual keyboard-->
+	<div id="map_menu">
+	</div>
+	<!-- end of map menu-->	
+</div>
+<!-- end of main content -->	
+</body>
+</html>
