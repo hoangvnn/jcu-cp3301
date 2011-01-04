@@ -5,21 +5,27 @@
 <link href="../css/search.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<?php
+	$pass="pass123";
+	$user="root";
+	$loc="localhost";
+	$db="iversity";
+?>
 
 <div align="left"> <img src="../images/Previous.png" width="85" height="85" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="85" height="85" /></a></div>
 <div align="center" id="search">
-<table width="100%" height="100%" >
+<table width="800px" height="600px" >
 <tr>
-	<td colspan="3" rowspan="7"><table width="100%" height="100%" cellpadding="3" cellspacing="0" id="table_time">
+	<td><table cellpadding="3" cellspacing="0" id="table_time">
 	  <tr id="heading">
-	    <th scope="col">Time</th>
-	    <th scope="col">Module</th>
-	    <th scope="col">Building</th>
+	    <th scope="col" width="100">Time</th>
+	    <th scope="col" width="550">Module</th>
+	    <th scope="col" width="150">Building</th>
 	    </tr>
 			<?php
-			mysql_connect("localhost", "root", "") or
+			mysql_connect($loc , $user , $pass) or
 				die("Could not connect: " . mysql_error());
-			mysql_select_db("iversity");
+			mysql_select_db($db);
 
 
 			$result = mysql_query("SELECT * FROM timetable;");
@@ -41,75 +47,92 @@
 
 			mysql_free_result($result);
 		?>
-	  </td>
-	<td>
-    	<div align="right">
+</table>
+
+<?php
+			mysql_connect($loc , $user , $pass) or
+				die("Could not connect: " . mysql_error());
+			mysql_select_db($db);
+			
+			$result = mysql_query("SELECT * FROM timetable;");
+?>
+<div style="display:inline-block; float:left; width:800px;">
+    	<div  style="display:inline-block; float:left;">
+		Select Building:
 		<form action="../">
 		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
 		<option value="#" selected="selected">Select Building</option>
-	  	<option value="#">A01-01</option>
-	  	<option value="building_result.html">A01-02</option>
-	  	<option value="#">A01-03</option>
-	  	<option value="#">B01-01</option>
-	  	<option value="#">B01-02</option>
-	  	</select>
+		<?php 
+		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+			{
+		?>
+	  	<option value="#"><?php echo $row["room"] ?></option>
+		<?php 
+			}
+			mysql_free_result($result);
+		?>
+		</select>
      	</form>
         </div>
-    </td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-	<td>
-    	<div align="right">
+    &nbsp;
+<?php
+			mysql_connect($loc , $user , $pass) or
+				die("Could not connect: " . mysql_error());
+			mysql_select_db($db);
+			
+	 		$result = mysql_query("SELECT * FROM timetable;");
+?>
+
+    	<div style="display:inline-block; float:left;">
+		Select Class:
     	<form action="../">
 		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
 		<option value="#" selected="selected">Select Class</option>
-	  	<option value="#">CP 2001</option>
-	  	<option value="class_result.html">MA 1401</option>
-	  	<option value="#">BX 1502</option>
-	  	<option value="#">PY 3401</option>
-	  	<option value="#">BU 1201</option>
+		<?php 
+		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+			{
+		?>
+	  	<option value="#"><?php echo $row["module"] ?></option>
+	  	<?php 
+			}
+			mysql_free_result($result);
+		?>
 	  	</select>
      	</form>
         </div>
-    </td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-	<td>
-    	<div align="right">
+    &nbsp;
+<?php
+			mysql_connect($loc , $user , $pass) or
+				die("Could not connect: " . mysql_error());
+			mysql_select_db($db);
+			
+			$result = mysql_query("SELECT * FROM timetable;");
+?>
+    	<div style="display:inline-block; float:left;">
+		Select Time:
     	<form action="../">
 		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
 		<option value="#" selected="selected">Select Time</option>
-	  	<option value="#">0900</option>
-	  	<option value="time_result.html">1000</option>
-	  	<option value="#">1100</option>
-	  	<option value="#">1200</option>
-	  	<option value="#">1300</option>
+	  	<?php 
+		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+			{
+		?>
+	  	<option value="#"><?php echo $row["time"] ?></option>
+	  	<?php 
+			}
+			mysql_free_result($result);
+		?>
 	  	</select>
      	</form>
         </div>
-    </td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-	<td>
-    	<div align="right">
+    &nbsp;
+    	<div style="display:inline-block; float:left;">
     	<form action="search_result.html" method="get" target="_self">
 			Search:
             <input type="text" name="dff_keyword" size="30" maxlength="50">
             <input type="submit" value="Find">
      	</form>
         </div>
-    </td>
-</tr>
-</table>
 </div>
 </body>
 </html>
