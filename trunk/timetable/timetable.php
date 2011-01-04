@@ -59,19 +59,20 @@
 <div style="display:inline-block; float:left; width:800px;">
     	<div  style="display:inline-block; float:left;">
 		Select Building:
-		<form action="../">
-		<select onchange="window.open(this.options[this.selectedIndex].value,'_self')">
+		<form action="search.php" method="POST">
+		<select>
 		<option value="#" selected="selected">Select Building</option>
 		<?php 
 		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
 			{
 		?>
-	  	<option value="#"><?php echo $row["room"] ?></option>
+	  	<option value="<?php echo $row["room"] ?>"><?php echo $row["room"] ?></option>
 		<?php 
 			}
 			mysql_free_result($result);
 		?>
 		</select>
+		<input type="submit" value="Search" ></input>
      	</form>
         </div>
     &nbsp;
