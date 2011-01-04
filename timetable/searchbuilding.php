@@ -8,8 +8,6 @@
 	if($_REQUEST)
 	{
 		$building = $_REQUEST['building'];
-		$class = $_REQUEST['class'];
-		$time = $_REQUEST['time'];
 	}
 	$pass="pass123";
 	$user="root";
@@ -18,7 +16,7 @@
 	
 ?>
 
-<div align="left"> <img src="../images/Previous.png" width="85" height="85" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="85" height="85" /></a></div>
+<div align="left"> <img src="../images/Previous.png" width="65" height="65" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="65" height="65" /></a></div>
 <div align="center" id="search">
 <table>
 <tr>
