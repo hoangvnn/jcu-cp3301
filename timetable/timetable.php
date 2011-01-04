@@ -12,13 +12,13 @@
 	$db="iversity";
 ?>
 
-<div align="left"> <img src="../images/Previous.png" width="85" height="85" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="85" height="85" /></a></div>
+<div align="left"> <img src="../images/Previous.png" width="65" height="65" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="65" height="65" /></a></div>
 <div align="left" id="search">
-<table width="800px" height="600px" >
+<table>
 <tr>
 	<td><table cellpadding="3" cellspacing="0" id="table_time">
 	  <tr id="heading">
-	    <th scope="col" width="100">Time</th>
+	    <th scope="col" width="50">Time</th>
 	    <th scope="col" width="550">Module</th>
 	    <th scope="col" width="150">Building</th>
 	    </tr>
