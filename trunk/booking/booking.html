@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<link rel=StyleSheet href="../css/master.css" type="text/css">
+	<link rel=StyleSheet href="../css/booking.css" type="text/css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#warning").hide();
+    $("#btn_submit").click(function(e){ 
+      e.preventDefault();
+      if (($("#username").val()=='jc123456')&&($("#pwd").val()=='123')) window.location.replace("booking_options.html");
+        else {
+        //alert("Invalid Student Id and Password");
+        $("#warning").show(1000);
+        
+        }
+    });
+});
+</script>
+    <title>Login page</title> 
+</head>
+        
+<body>
+<div class="main">
+	<div id="nav">
+		<a href="../homepage.html"><img src="../images/Home.png" width="60" height="60" align="left" border="0"/></a>
+	</div>
+
+<div style="margin-left: 200px;">
+<br />
+<br />
+<br />
+<br />
+<img src="../images/iVersity_logo_1.png">
+</div>
+
+
+<div style="width:450px; padding-top:40px; padding-bottom: 20px; margin-left: 240px;">
+<h1 style="margin-left: 120px;">Login</h1>
+	<FORM ACTION="login.php" METHOD="POST">
+
+	<table cellpadding=0 cellspacing=0 border=1 width=300px;>
+	<tr>
+       <td bgcolor="#F0F0F0" align=center style="padding:2; padding-bottom:4"><b>Enter your Student ID and Password</b>
+	</tr>
+  	</table>
+    <table bgcolor="#F0F0F0" width=	300px;>
+	<tr>
+		
+   	 	<td>Student ID:</td>
+     	<td><input type="text" name="username" size=20 id="username"></td>
+    </tr>
+	
+    <tr>
+    	<td>Password:</td>
+        <td><input type="password" name="password" size=20 id="pwd"></td>
+    </tr>
+
+	<tr>
+        <td colspan=2 align=center><input type="submit" value="Login" id="btn_submit">
+        <br/>        
+        <span id="warning" style="display:none; color:red;">Warning: invalid details</span>
+      </td>
+        
+    </tr>
+	
+    <tr>
+    	<td colspan=2>&nbsp;</td>
+    </tr>
+	
+    <tr>
+    	<td colspan=2 align=center>Forgot your username or password? Use our thumbprint scanner <a href="scanner.html">here</a>!</td>
+    </tr>
+	</table>
+  	</form>
+	</div>
+</center> 
+</div>
+</body>
+</html>

@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+body{
+	background-image:url(../images/background_main.png);
+	background-repeat:no-repeat;
+}
+
 #search
 {
 	text-align:center;
