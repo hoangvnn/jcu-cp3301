@@ -1,13 +1,37 @@
-@charset "utf-8";
-/* CSS Document */
-img
-{  
-border-style: none;
+body{
+	background: url('../images/background_main.png') no-repeat;
 }
-
-body
+#nav_bar{
+	margin-top:266px;
+	margin-left:120px;
+}
+#nav_bar a img{
+	border:0;
+}
+#nav_bar a div{
+	display:inline-block;
+}
+#linkmap{
+	width:80px;
+	height:80px;
+}
+.linkmapnorm
 {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	background:url(../images/bg.png);
+	background-image: url('../images/btn_map 80x80.png');
+	background-repeat: no repeat;
+}
+.linkmapglow{
+	background-image: url('../images/glowingbtn_map 80x80.png');
+}
+#linktimetable{
+	background-image: url('../images/btn_timetable 80x80.png');
+	background-repeat: no repeat;
+	width:80px;
+	height:80px;
+}
+#linkbooking{
+	background-image: url('../images/btn_booking 80x80.png');
+	background-repeat: no repeat;
+	width:80px;
+	height:80px;
 }
