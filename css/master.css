@@ -1,5 +1,6 @@
 body{
 	background: url('../images/background_main.png') no-repeat;
+	font-family:"arial";
 }
 #nav_bar{
 	margin-top:266px;
