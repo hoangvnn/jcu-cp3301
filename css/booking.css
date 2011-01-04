@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main {
+	background:url(../images/background_main.png);
+	width:800px;
+	height:600px;
+
+}
+
+#nav a img {
+    margin: 5px 3px 0px 3px;
+
+}

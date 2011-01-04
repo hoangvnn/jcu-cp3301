@@ -1,5 +1,4 @@
 body{
-	background: url('../images/background_main.png') no-repeat;
 	font-family:"arial";
 }
 #nav_bar{
@@ -32,6 +31,24 @@ body{
 }
 #linkbooking{
 	background-image: url('../images/btn_booking 80x80.png');
+	background-repeat: no repeat;
+	width:80px;
+	height:80px;
+}
+#linkannouncement{
+	background-image: url('../images/glowingbtn_map 80x80.png');
+	background-repeat: no repeat;
+	width:80px;
+	height:80px;
+}
+#linklibrary{
+	background-image: url('../images/glowingbtn_map 80x80.png');
+	background-repeat: no repeat;
+	width:80px;
+	height:80px;
+}
+#linkpayment{
+	background-image: url('../images/glowingbtn_map 80x80.png');
 	background-repeat: no repeat;
 	width:80px;
 	height:80px;
