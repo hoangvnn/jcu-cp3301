@@ -13,7 +13,7 @@
 ?>
 
 <div align="left"> <img src="../images/Previous.png" width="85" height="85" onClick="history.go(-1)"/> &nbsp; &nbsp; <a href="../homepage.html"><img src="../images/Home.png" width="85" height="85" /></a></div>
-<div align="center" id="search">
+<div align="left" id="search">
 <table width="800px" height="600px" >
 <tr>
 	<td><table cellpadding="3" cellspacing="0" id="table_time">
@@ -130,7 +130,7 @@
         </div>
     &nbsp;
     	<div style="display:inline-block; float:left;">
-    	<form action="search_result.html" method="get" target="_self">
+    	<form action="timetable.php" target="_self">
 			Search:
             <input type="text" name="dff_keyword" size="30" maxlength="50">
             <input type="submit" value="Find">
