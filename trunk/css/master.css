@@ -1,8 +1,27 @@
 body{
 	font-family:"arial";
 }
+#welcomemsg{
+	height:300px;
+	width:800px;
+	display:inline-block;
+}
+.msg1{
+	background-image:url(../images/logo.png);
+	background-repeat: no-repeat;
+	height:86px;
+	width:400px;
+	margin-top:100px;
+	margin-left:200px;
+	display:inline-block;
+}
+.msg2{
+	font-size: 1.5em;
+	color:#ffffff;
+	display:none;
+}
 #nav_bar{
-	margin-top:266px;
+	margin-top:-34px;
 	margin-left:120px;
 }
 img{
