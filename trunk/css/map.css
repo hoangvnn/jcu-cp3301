@@ -1,9 +1,9 @@
 #main_content{
-	display:inline-block; 
 	width:800px; 
 	height:600px;
-	margin:0px 0px 0px 0px;	
 	background:url(../images/background_main.png);
+	margin-left:-8px;
+	margin-top:-8px;
 }
 
 #nav_bar{
