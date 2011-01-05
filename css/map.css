@@ -132,6 +132,9 @@ $info li a:active{
 	text-decoration:none;
 	padding:5px;
 }
+img{
+	border:0;
+}
 #divResult
 {
 	display:block;

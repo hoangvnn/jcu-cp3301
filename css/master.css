@@ -8,48 +8,33 @@ body{
 #nav_bar a img{
 	border:0;
 }
-#nav_bar a div{
+#nav_bar a span{
 	display:inline-block;
-}
-#linkmap{
 	width:80px;
 	height:80px;
 }
-.linkmapnorm
+#linkmap
 {
 	background-image: url('../images/btn_map 80x80.png');
 	background-repeat: no repeat;
 }
-.linkmapglow{
-	background-image: url('../images/glowingbtn_map 80x80.png');
-}
 #linktimetable{
 	background-image: url('../images/btn_timetable 80x80.png');
 	background-repeat: no repeat;
-	width:80px;
-	height:80px;
 }
 #linkbooking{
 	background-image: url('../images/btn_booking 80x80.png');
 	background-repeat: no repeat;
-	width:80px;
-	height:80px;
 }
 #linkannouncement{
-	background-image: url('../images/glowingbtn_map 80x80.png');
+	background-image: url('../images/btn_announcements 80x80.png');
 	background-repeat: no repeat;
-	width:80px;
-	height:80px;
 }
 #linklibrary{
-	background-image: url('../images/glowingbtn_map 80x80.png');
+	background-image: url('../images/btn_library 80x80.png');
 	background-repeat: no repeat;
-	width:80px;
-	height:80px;
 }
 #linkpayment{
-	background-image: url('../images/glowingbtn_map 80x80.png');
+	background-image: url('../images/btn_payment 80x80.png');
 	background-repeat: no repeat;
-	width:80px;
-	height:80px;
 }
