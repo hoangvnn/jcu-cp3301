@@ -3,6 +3,8 @@
 <head>
 <link href="../css/master.css" rel="stylesheet" type="text/css"/>
 <link href="../css/search.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../keyboard/keyboard.css">
+<script type="text/javascript" src="../keyboard/keyboard.js" charset="UTF-8"></script>
 </head>
 <body>
 <?php
@@ -135,7 +137,7 @@
     	<div style="display:inline-block; float:left;">
     	<form action="timetable.php" target="_self">
 			Search:
-            <input type="text" name="dff_keyword" size="30" maxlength="50">
+            <input type="text" name="dff_keyword" size="30" maxlength="50" class="keyboardInput">
             <input type="submit" value="Find">
      	</form>
         </div>
