@@ -15,7 +15,7 @@
       if (($("#username").val()=='jc123456')&&($("#pwd").val()=='123')) window.location.replace("booking_options.html");
         else {
         //alert("Invalid Student Id and Password");
-        $("#warning").show(1000);
+        $("#warning").show(1000).delay(500).hide(300);
         
         }
     });
@@ -63,7 +63,7 @@
 	<tr>
         <td colspan=2 align=center><input type="submit" value="Login" id="btn_submit">
         <br/>        
-        <span id="warning" style="display:none; color:red;">Warning: invalid details</span>
+        <div style="display:block; height:30px; width:200px"><span id="warning" style="display:none; color:red;">Warning: invalid username or password</span></div>
       </td>
         
     </tr>
