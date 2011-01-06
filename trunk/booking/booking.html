@@ -4,7 +4,9 @@
 <head>
 	<link rel=StyleSheet href="../css/master.css" type="text/css">
 	<link rel=StyleSheet href="../css/booking.css" type="text/css">
-<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../keyboard/keyboard.css">
+	<script type="text/javascript" src="../keyboard/keyboard.js" charset="UTF-8"></script>	
 <script type="text/javascript">
   $(document).ready(function(){
     $("#warning").hide();
@@ -50,12 +52,12 @@
 	<tr>
 		
    	 	<td>Student ID:</td>
-     	<td><input type="text" name="username" size=20 id="username"></td>
+     	<td><input type="text" name="username" size=20 id="username" class="keyboardInput"></td>
     </tr>
 	
     <tr>
     	<td>Password:</td>
-        <td><input type="password" name="password" size=20 id="pwd"></td>
+        <td><input type="password" name="password" size=20 id="pwd" class="keyboardInput"></td>
     </tr>
 
 	<tr>
